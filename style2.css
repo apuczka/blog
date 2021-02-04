@@ -1,0 +1,127 @@
+.container {
+    display: grid;
+    margin: auto;
+    width: 80vw;
+    background-image: url('images/bcg.jpeg');
+    background-size: cover;
+    grid-template-columns: 320px; 
+    grid-template-rows: repeat(5 1fr);
+    grid-template-areas: 
+    "hd"
+    "tt"
+    "sb" 
+    "cnt"
+    "ft";
+    font-family: 'Fraunces', serif;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid #444; */
+    /* margin: 10px; */
+    /* padding-left: 10px; */
+}
+#header {
+    grid-area: hd;
+    flex-direction: row;
+    justify-content: center;
+    letter-spacing: 20px;
+    gap: 10px;
+    font-size: 5vw;
+    color: #018377;
+    
+}
+#title {
+    grid-area: tt;
+    justify-content: center;
+    align-items: center;
+}
+#sidebar {
+    grid-area: sb;
+}
+#content {
+    grid-area: cnt;
+    margin: 20px;
+    /* flex-direction: column; */
+}
+#footer {
+    grid-area: ft;
+    border-top: 1px solid #444;
+    border-radius: 80%;
+    justify-content: center;
+    margin-top: 200px;
+    /* height: 50px; */
+}
+.icon {
+    height: 20px;
+    width: 20px;
+}
+.site-nav {
+    /* font-family: 'Varela Round', sans-serif; */
+    list-style: none;
+    margin: 5px;
+}
+.site-nav .site-nav-item {
+    padding: 5px;
+    margin: 10px;
+}
+.site-nav .site-nav-item a {
+    color: black;
+    text-decoration: none;
+}
+.site-nav .site-nav-item a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #397c59;
+}
+article {
+    margin: 30px;
+}
+.pic {
+    width: 300px;
+    height: 200px;
+    /* float: right; */
+}
+@media (min-width: 600px) and (max-width: 900px){
+    .container {
+        display: grid;
+        margin: none;
+        width: 100%;
+        background-image: url('images/bcg.jpeg');
+        background-size: cover;
+        grid-template-columns: 200px 300px; 
+        grid-template-rows: 200px 5% 65% 10%;
+        grid-template-areas: 
+        "hd hd hd"
+        "tt tt tt"
+        "sb cnt cnt"
+        "ft ft ft";
+        font-family: 'Fraunces', serif;
+    }
+    .box {
+        display: flex;
+        /* flex-direction: row; */
+
+    }
+}
+
+
+@media (min-width: 901px){
+    .container {
+        display: grid;
+        margin: none;
+        width: 100%;
+        background-image: url('images/bcg.jpeg');
+        background-size: cover;
+        grid-template-columns: 200px 350px; 
+        grid-template-rows: 200px 5% 65% 10%;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "tt tt tt tt"
+        "sb cnt cnt cnt"
+        "ft ft ft ft";
+        font-family: 'Fraunces', serif;
+    
+    }
+}
