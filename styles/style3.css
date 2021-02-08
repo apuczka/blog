@@ -1,8 +1,12 @@
+@import "../styles/header.css";
+@import "../styles/footer.css";
+@import "../styles/sidebar.css";
+
 .container {
     display: grid;
-    width: 80vw;
+    width: 100%;
     grid-template-columns: 320px; 
-    grid-template-rows: 100px 100px 50px 1fr 1fr 1fr;
+    grid-template-rows: 100px 160px 90px 1fr 1fr 1fr;
     grid-template-areas: 
     "hd"
     "sb"
@@ -10,33 +14,21 @@
     "cnt" 
     "pht"
     "ft";
-    background-image: url('images/bcg.jpeg');
+    background-image: url('../images/bcg.jpeg');
     font-family: 'Fraunces', serif;
+
 }
 .box {
     display: flex;
-    /* border: 1px solid #444; */
-    /* margin: 10px; */
-    /* padding-left: 10%; */
 }
-#header {
-    grid-area: hd;
-    flex-direction: row;
-    justify-content: center;
-    letter-spacing: 20px;
-    gap: 10px;
-    font-size: 5vw;
-    color: #018377;
-    
-}
+
 #title {
     grid-area: tt;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: center;
 }
-#sidebar {
-    grid-area: sb;
-}
+
 #content {
     grid-area: cnt;
     padding-left: 10px;
@@ -48,69 +40,47 @@
 #photo {
     grid-area: pht;
 }
-#footer {
-    grid-area: ft;
-    border-top: 1px solid #444;
-    border-radius: 80%;
-    justify-content: center;
-    height: 50px;
-}
 .icon {
     height: 20px;
     width: 20px;
 }
-.site-nav {
-    /* font-family: 'Varela Round', sans-serif; */
-    list-style: none;
-    margin: 5px;
-}
-.site-nav .site-nav-item {
-    padding: 5px;
-    margin: 10px;
-}
-.site-nav .site-nav-item a {
-    color: black;
-    text-decoration: none;
-}
-.site-nav .site-nav-item a:hover {
-    text-decoration: underline;
-    color: white;
-    background-color: #397c59;
-}
-.about figure img {
+
+.box figure img {
     width: 100px;
-    float: left;
+    float: bottom;
     margin: 10px;
     border-radius: 50%;
-    /* padding: 10px; */
+    /*border: 1px solid red;*/
+}
+.box figure figcaption {
+    text-align: center;
+    font-style: italic;
+
 }
 #nestGrid {
     display: grid;
     grid-template-columns: 100%;
-    align-content: top; 
+    align-content: center;
     margin: 50px;
     /* border: 2px solid #FFAE0C; */
 }
 .photobox {
     height: 200px;
     width: 350px;
-    
-    
 }
 #one {
-    background-image: url('images/mountains.jpg');
+    background-image: url('../images/mountains.jpg');
     background-size: cover;
 }
 #two {
-    background-image: url('images/pheasant.jpg');
+    background-image: url('../images/pheasant.jpg');
     background-size: cover;
 }
 
 @media (min-width: 600px) and (max-width: 900px){
     .container {
         display: grid;
-        margin: none;
-        width: 80vw;
+        width: 100%;
         grid-template-columns: 200px 300px; 
         grid-template-rows: 20% 15% 60% 10%;
         grid-template-areas: 
@@ -118,15 +88,15 @@
         "tt tt tt tt"
         "sb cnt cnt pht"
         "ft ft ft ft";
-        background-image: url('images/bcg.jpeg');
+        background-image: url('../images/bcg.jpeg');
         font-family: 'Fraunces', serif;
+
     }
 }
 
 @media (min-width: 901px){
     .container {
         display: grid;
-        margin: none;
         width: 100%;
         grid-template-columns: 200px 300px; 
         grid-template-rows: 20% 15% 60% 10%;
@@ -135,7 +105,8 @@
         "tt tt tt tt tt"
         "sb cnt cnt pht pht"
         "ft ft ft ft ft";
-        background-image: url('images/bcg.jpeg');
+        background-image: url('/images/bcg.jpeg');
         font-family: 'Fraunces', serif;
+
     }
 }
